@@ -44,6 +44,12 @@ async def main():
 
     logger.info("Extraction Summary: Found %d products matching '%s'.", len(products), search_term)
 
+    # Step 3: Persist structured results into MongoDB
+    db_storage = MongoStorage()
+    if products:
+        db_storage.save_products(products)
+        logger.info("Successfully persisted products to MongoDB.")
+    db_storage.close()
 
     
 if __name__ == "__main__":
