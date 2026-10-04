@@ -37,7 +37,7 @@ async def main():
     logger.info("Starting Scraping Workflow for: '%s'", search_term)
 
     # Step 1 & 2: Launch Playwright, retrieve DOM, and parse product data
-    headless_setting =  False
+    headless_setting =  True
     scraper = MDComputersScraper(headless=headless_setting)
     
     products = await scraper.fetch_search_results(search_term)

@@ -65,13 +65,13 @@ class DOMExtractor:
 
             # Construct flexible document payload
             product_doc = {
-                "search_term": search_term,
-                "title": title,
-                "product_url": product_url,
-                "normal_price": normal_price,
-                "special_price": special_price,
-                "stock_status": stock_status,
-                "scraped_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
+                "search_term": search_term, # Captures input query to enable traceability and grouping across searches
+                "title": title, # Primary product identifier displayed on MD Computers
+                "product_url": product_url, # Direct reference link to the product page for validation and deep-linking
+                "normal_price": normal_price, # Stores original MRP/list price to maintain historical pricing context
+                "special_price": special_price, # Captures discounted/selling price to track active deal values 
+                "stock_status": stock_status, # Indicates inventory availability at time of scraping (e.g., In Stock / Out of Stock)
+                "scraped_at": datetime.datetime.now(datetime.timezone.utc).isoformat() # ISO UTC timestamp providing metadata for audit trails and other analysis
             }
             products.append(product_doc)
 
