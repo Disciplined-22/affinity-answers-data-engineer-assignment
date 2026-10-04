@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Environment configuration (protects API keys & MongoDB URI credentials)
+.env*
+.env
+.env.local
+.env.*.local
+
+# Playwright browser downloads & test reports
+/ms-playwright/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# MongoDB & Database local storage
+*.db
+*.sqlite3
+
+# IDEs & Code Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+.cursor/
+
+
+# BUT keep every .env.example file across all subdirectories
+!.env.example
+!/**/.env.example
+
+
+compose.yaml
+Dockerfile
+.devcontainer/
