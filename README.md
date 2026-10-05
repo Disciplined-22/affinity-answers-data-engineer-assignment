@@ -107,7 +107,7 @@ docker compose up -d --build
 
 ### 2. Make Shell Script Executable
 
-Grant execution permissions to the shell script:
+Grant execution permissions to the shell script: (need to run inside docker terminal)
 
 ```bash
 chmod +x task3_shell/extract_companies.sh
@@ -117,9 +117,9 @@ chmod +x task3_shell/extract_companies.sh
 
 ### 3. Run the Script
 
-Execute the shell script by passing the dataset URL as an argument:
+Execute the shell script by passing the dataset URL as an argument: (need to run inside docker terminal)
 
-```bash
+```bash 
 ./task3_shell/extract_companies.sh "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/refs/heads/main/data/constituents.csv"
 ```
 
