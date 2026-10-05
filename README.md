@@ -120,6 +120,6 @@ chmod +x task3_shell/extract_companies.sh
 Execute the shell script by passing the dataset URL as an argument:
 
 ```bash
-./task3_shell/extract_companies.sh "[https://raw.githubusercontent.com/datasets/s-and-p-500-companies/refs/heads/main/data/constituents.csv](https://raw.githubusercontent.com/datasets/s-and-p-500-companies/refs/heads/main/data/constituents.csv)"
+./task3_shell/extract_companies.sh "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/refs/heads/main/data/constituents.csv"
 ```
 
