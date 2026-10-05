@@ -1,4 +1,4 @@
-##  Design Choices for Question 1: Python
+## Design Choices for Question 1: Python
 
 - **Playwright:** Used Playwright over HTTP requests because it is easier and faster to implement, while also providing better support for future authentication and bot-detection requirements.
 - **MongoDB:** Used MongoDB because of its flexible schema, making it easier to handle website structure changes and capture varying product data; it also supports horizontal scaling (SQL databases may require additional operational overhead for horizontal scaling).
@@ -19,17 +19,36 @@ Example
 
 ```
 
+
+
 ## Environment Setup & Execution
+
+
 
 ### 1. Install Dependencies & Activate Virtual Environment
 
 Create and Activate your virtual environment (`.venv`):
+
+```bash
+python -m venv .venv
+
+# On Linux/macOS
+source .venv/bin/activate
+
+# On Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+
+# On Windows (CMD)
+.venv\Scripts\activate.bat
+```
 
 Install the required Python dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+
 
 ### 2. Configure Environment Variables
 
@@ -39,11 +58,15 @@ Create a .env file in the root directory and define your MongoDB URI:
 MONGO_URI="mongodb+srv://<username>:<password>@cluster.mongodb.net/dbname?retryWrites=true&w=majority"
 ```
 
+
+
 ### 3. Run the Scraper
 
 ```bash
 python task1_python/src/main.py "external harddrive"
 ```
+
+
 
 ## SQL Execution & Query Setup (Task 2)
 
@@ -55,6 +78,8 @@ All queries for Task 2 are stored in individual `.sql` files inside the `task2_s
 
 ---
 
+
+
 ### Execution Instructions
 
 To execute these queries:
@@ -64,7 +89,11 @@ To execute these queries:
 3. Open each SQL file directly from the `task2_sql/` directory, or copy the query contents into an active SQL editor tab.
 4. Execute each statement sequentially against the database.
 
+
+
 ## Environment Setup & Execution (Task 3)
+
+
 
 ### 1. Build and Start Docker Services
 
@@ -74,6 +103,8 @@ Spin up the required services using Docker Compose: (I am using Windows, so I ne
 docker compose up -d --build
 ```
 
+
+
 ### 2. Make Shell Script Executable
 
 Grant execution permissions to the shell script:
@@ -81,6 +112,8 @@ Grant execution permissions to the shell script:
 ```bash
 chmod +x task3_shell/extract_companies.sh
 ```
+
+
 
 ### 3. Run the Script
 
