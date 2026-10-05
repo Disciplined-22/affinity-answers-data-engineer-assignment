@@ -21,3 +21,11 @@ LIMIT 1;
 
 -- Note on Performance:
 -- Query execution time may vary depending on the public Rfam database load and server latency.
+
+
+-- 2. Performance & Execution Bottlenecks:
+--    - Execution times fluctuate (from ~5–10s up to 20s+) due to key reasons below:
+--    - Full Table Scans: Leading wildcard searches (`LIKE '%...'`) force full table 
+--      scans across millions of rows and massive datasets.
+--    - Public Server Contention: Execution time fluctuates due to high concurrent query 
+--      load, network latency, and shared server limits on the public Rfam host.
