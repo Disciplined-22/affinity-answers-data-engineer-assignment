@@ -54,7 +54,7 @@ class MongoStorage:
         try:
             result = self.collection.insert_many(products) # inserts has [{object_id}, {object_id}, {object_id} ]
             inserted_count = len(result.inserted_ids)
-            logger.info(f"[Database] Successfully saved {inserted_count} products into 'md_computers.products'.")
+            logger.info(f"[Database] Successfully saved {inserted_count} products.")
             return inserted_count
         except PyMongoError as e:
             logger.info(f"[Database Error] Failed to write documents to MongoDB: {e}")

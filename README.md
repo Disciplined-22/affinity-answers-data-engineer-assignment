@@ -19,3 +19,9 @@ Example
 }
 
 ```
+
+<!-- Note : You need  to have an .env file(and it has not been pushed here ) in that mention your mongo url in the variable MONGO_URI -->
+
+```json
+MONGO_URI=""
+```

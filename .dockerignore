@@ -1,0 +1,36 @@
+# Virtual Environment (Must be excluded so Linux image uses its own packages)
+.venv/
+venv/
+env/
+
+# Python compiled cache files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment & Secret files
+.env
+*.env
+.env*
+
+# IDE / Editor configuration folders
+.cursor/
+.vscode/
+.idea/
+.devcontainer/
+
+# Git history & configuration
+.git/
+.gitignore
+.gitattributes
+
+# Docker / Compose configurations (Not needed inside the container filesystem)
+Dockerfile
+compose.yaml
+compose.yml
+.dockerignore
+
+# OS-generated files
+.DS_Store
+Thumbs.db
