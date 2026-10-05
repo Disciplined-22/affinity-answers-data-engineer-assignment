@@ -1,0 +1,10 @@
+services:
+  affinity-answers:
+    container_name: affinity-answers
+    image: affinity-answers-app:latest
+    build: .
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app

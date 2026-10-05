@@ -48,6 +48,4 @@ yarn-error.log*
 !/**/.env.example
 
 
-compose.yaml
-Dockerfile
 .devcontainer/
